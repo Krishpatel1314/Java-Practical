@@ -11,3 +11,8 @@ public class Practical3 {
         System.out.println("Distance in feet= "+m*3.28084+"ft");
     }  
 }
+/*
+OUTPUT:
+Enter distance in meters:2.5
+Distance in feet= 8.2021ft
+ */

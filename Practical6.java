@@ -16,3 +16,12 @@ public class Practical6 {
         System.out.println("The letter is Consonant!!");
     }
 }
+
+/*
+OUTPUT:
+Enter a letter:r
+The letter is Consonant!!
+----------------------------
+Enter a letter:e
+The letter is Vowel!!
+ */

@@ -16,9 +16,16 @@ public class Practical2 {
         System.out.print("Enter height in inches:");
         double h=sc.nextDouble();
         sc.close();
-        double w1=(w*.45359237);
-        double h1=(h*.0254);
-        double bmi=(w1/(h1*h1));
+        double kg=(w*.45359237);
+        double m=(h*.0254);
+        double bmi=(kg/(m*m));
         System.out.println("BMI="+bmi);
     }
 }
+
+/*
+OUTPUT:
+Enter weight in pounds:40
+Enter height in inches:12
+BMI=195.29710545532208
+ */

@@ -26,3 +26,10 @@ public class Practical5 {
         System.out.println("C is Maximum");
     }
 }
+/*
+OUTPUT:
+Enter number A:10
+Enter number B:15
+Enter number C:5
+B is Maximum
+ */

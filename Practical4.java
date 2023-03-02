@@ -33,3 +33,12 @@ public class Practical4 {
         }
     }
 }
+
+/*
+OUTPUT:
+Enter the number:13
+13 is the number is prime number.
+------------------------------------
+Enter the number:22
+22 is the number is not prime number.
+ */

@@ -41,3 +41,16 @@ public class Practical1{
         }
     }   
 }
+
+/*
+ * OUTPUT:
+Enter the values of Equation-1
+Enter Value of a:3.4
+Enter Value of b:50.2
+Enter Value of e:44.5
+Enter the values of Equation-2
+Enter Value of c:2.1
+Enter Value of d:.55
+Enter Value of f:5.9
+X=2.623901496861419    Y=0.7087397392563978
+ */

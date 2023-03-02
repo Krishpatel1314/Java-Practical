@@ -19,7 +19,6 @@ public class Practical10 {
             {
                 System.out.print(" ");
                 System.out.print(ch[j]);
-                System.out.print(" ");
                 j++;
             }
             System.out.println(" ");

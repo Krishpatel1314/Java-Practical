@@ -19,3 +19,9 @@ public class Practical8 {
         System.out.println("Total no. of words start with capital letters:"+ct);
     }
 }
+
+/*
+OUTPUT:
+Enter a String:Java is Case sensitive Language.
+Total no. of words start with capital letters:3
+ */

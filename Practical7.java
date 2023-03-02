@@ -14,3 +14,10 @@ public class Practical7 {
         System.out.println("Your sub string is: "+str.substring(l/2));
     }
 }
+
+/*
+OUTPUT:
+Enter a String:Java is case sensitive language.
+Length of the string: 32
+Your sub string is: sitive language.
+ */

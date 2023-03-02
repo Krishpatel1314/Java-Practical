@@ -19,3 +19,11 @@ public class Practical9 {
         System.out.println("Entered number/string is not a palindrome");
     }
 }
+/*
+OUTPUT:
+Enter number/string:12121
+Entered number/string is a palindrome
+--------------------------------------------
+Enter number/string:Java
+Entered number/string is not a palindrome
+ */
