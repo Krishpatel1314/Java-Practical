@@ -4,18 +4,13 @@ Specify size of array and elements of array from command line
 argument. 
 */
 import java.util.Arrays;
-import java.util.Scanner;
 public class Practical18 {
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        System.out.print("Enter no. of elements you want to enter:");
-        int n=sc.nextInt();
+        int n=Integer.parseInt(args[0]);                //size of array
         int[] num=new int[n];
-        System.out.print("Enter the elements:");
-        for (int i = 0; i < num.length; i++) {
-            num[i]=sc.nextInt();
+        for (int i = 0; i < n; i++) {
+            num[i]=Integer.parseInt(args[i+1]);
         }
-        sc.close();
         Arrays.sort(num);
         System.out.print("Sorted array:");
         for (int i = 0; i < num.length; i++) {
@@ -25,7 +20,7 @@ public class Practical18 {
 }
 /*
 OUTPUT:
-Enter no. of elements you want to enter:5
-Enter the elements:13 54 14 37 22
+using cmd line arguments
+E:\SEM-4\Java-Practical>java Practical18.java 5 13 54 14 37 22
 Sorted array: 13 14 22 37 54
 */
