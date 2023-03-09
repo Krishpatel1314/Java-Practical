@@ -10,18 +10,28 @@ public class Practical10 {
     public static void main(String[] args) {
         char ch[]={'s','t','r','e','a','m'};
         String s=new String(ch);
-        int i,j,k,n;
+        int n,j,k;
         n=s.length();
-        for(i=n;i>0;i--)
-        {
+        for (int l = 0; l < n; l++) {
             j=0;
-            for(k=i;k<=n;k++)
-            {
+            for (int l2 = 0; l2 < n-1-l; l2++) {
                 System.out.print(" ");
-                System.out.print(ch[j]);
+            }
+            for ( k = 0; k <=l ; k++) {
+                System.out.print(ch[j]+"  ");
                 j++;
             }
             System.out.println(" ");
         }
+        System.out.println(" ");
     }
 }
+/*
+OUTPUT:
+     s
+    s  t
+   s  t  r
+  s  t  r  e
+ s  t  r  e  a
+s  t  r  e  a  m
+ */
