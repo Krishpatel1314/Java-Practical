@@ -1,41 +1,52 @@
-
-import javafx.application.Application;
-import javafx.scene.Scene;
-import javafx.scene.layout.StackPane;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Circle;
-import javafx.stage.Stage;
-
-/**
- * Chapter 15 Exercise 7:
- *
- *      (Change color using a mouse)
- *      Write a program that displays the color of a circle as
- *      black when the mouse button is pressed and as white when
- *      the mouse button is released.
- *
- * Created by Luiz Arantes Sa on 9/15/14.
+/*
+Write a program that displays the color of a circle as red when the 
+mouse button is pressed and as blue when the mouse button is 
+released.
  */
-public class Practical40  extends Application{
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
 
-    @Override
-    public void start(Stage primaryStage) {
-        double width = 400;
-        double height = 400;
-        Circle c = new Circle(width / 2, height / 2, Math.min(width, height) / 10, Color.WHITE);
+class CircleColorChanger extends JPanel {
 
-        c.setStroke(Color.BLACK);
+    private static final long serialVersionUID = 1L;
+    private boolean mousePressed = false;
+    private Color circleColor = Color.BLUE;
 
-        StackPane pane = new StackPane(c);
+    public CircleColorChanger() {
+        addMouseListener(new MouseAdapter() {
+            public void mousePressed(MouseEvent e) {
+                mousePressed = true;
+                circleColor = Color.RED;
+                repaint();
+            }
 
-        primaryStage.setScene(new Scene(pane, width, height));
-        pane.setOnMousePressed(e -> c.setFill(Color.BLACK));
-        pane.setOnMouseReleased(e -> c.setFill(Color.WHITE));
-        primaryStage.setTitle("Click circle..");
-        primaryStage.show();
+            public void mouseReleased(MouseEvent e) {
+                mousePressed = false;
+                circleColor = Color.BLUE;
+                repaint();
+            }
+        });
     }
-    public static void main(String[] args) {
-        Application.launch(args);
 
+    public void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        int circleSize = Math.min(getWidth(), getHeight()) - 20;
+        int circleX = (getWidth() - circleSize) / 2;
+        int circleY = (getHeight() - circleSize) / 2;
+        g.setColor(circleColor);
+        g.fillOval(circleX, circleY, circleSize, circleSize);
+    }
+
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Circle Color Changer");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(400, 400);
+        CircleColorChanger circle = new CircleColorChanger();
+        frame.add(circle);
+        frame.setVisible(true);
     }
 }
