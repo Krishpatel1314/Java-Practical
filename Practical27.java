@@ -1,5 +1,3 @@
-import MyPack.ClassA;
-
 /*
 Write a program that declares an abstract class A with an abstract 
 method display( ). Provide subclasses A1 & A2 that each 
@@ -9,12 +7,12 @@ invoke that method.
 abstract class A{
     public abstract void display();
 }
-class A1 extends ClassA{
+class A1 extends A{
     public void display(){
         System.out.println("This is A1 Class");
     }
 }
-class A2 extends ClassA{
+class A2 extends A{
     public void display(){
         System.out.println("This is A2 Class");
     }
